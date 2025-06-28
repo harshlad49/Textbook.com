@@ -79,7 +79,7 @@ const [showLogin, setShowLogin] = useState(false);
     <nav className="w-full bg-white shadow-md relative z-50">
       <div className="flex items-center justify-between px-6 py-3">
         <div className="flex items-center space-x-3">
-          <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[200px] h-[50px]" />
+          <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[150px] h-[30px]" />
         </div>
 
         <div className="flex space-x-6 items-center relative">

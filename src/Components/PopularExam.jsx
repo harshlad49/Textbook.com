@@ -15,17 +15,17 @@ const tabs = [
 ];
 
 const sscExams = [
-  { title: 'SSC CGL', link: '/exams/ssc-cgl' },
-  { title: 'SSC CHSL', link: '/exams/ssc-chsl' },
-  { title: 'SSC MTS', link: '/exams/ssc-mts' },
-  { title: 'Delhi Police Constable', link: '/exams/delhi-police-constable' },
-  { title: 'SSC GD Constable', link: '/exams/ssc-gd-constable' },
-  { title: 'SSC Selection Post', link: '/exams/ssc-selection-post' },
-  { title: 'SSC Stenographer', link: '/exams/ssc-stenographer' },
-  { title: 'SSC CPO', link: '/exams/ssc-cpo' },
-  { title: 'Delhi Police Head Constable', link: '/exams/delhi-police-head-constable' },
-  { title: 'SSC Head Constable AWO TPO', link: '/exams/ssc-head-constable-awo-tpo' },
-  { title: 'Delhi Police MTS', link: '/exams/delhi-police-mts' },
+  { title: 'SSC CGL', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'SSC CHSL', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'SSC MTS', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'Delhi Police Constable', link: '/imgi_8_Delhi Police_All_1594144704.png' },
+  { title: 'SSC GD Constable', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'SSC Selection Post', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'SSC Stenographer', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'SSC CPO', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'Delhi Police Head Constable', link: '/imgi_8_Delhi Police_All_1594144704.png' },
+  { title: 'SSC Head Constable AWO TPO', link: '/imgi_12_SSC_All_1594144420.png' },
+  { title: 'Delhi Police MTS', link: '/imgi_8_Delhi Police_All_1594144704.png' },
 ];
 
 const getLogo = (title) => {
@@ -95,21 +95,22 @@ const PopularExams = () => {
      
       {activeTab === 'SSC Exams' && (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {sscExams.map((exam, index) => (
-              <a
-                key={index}
-                href={exam.link}
-                className="flex items-center justify-between bg-white border rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition cursor-pointer no-underline hover:no-underline"
-              >
-                <div className="flex items-center gap-3">
-                  <img src={getLogo(exam.title)} alt="logo" className="w-8 h-8 object-contain" />
-                  <span className="font-medium text-gray-800">{exam.title}</span>
-                </div>
-                <FaChevronRight className="text-gray-400" />
-              </a>
-            ))}
-          </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  {sscExams.map((exam, index) => (
+    <a
+      key={index}
+      href={exam.link}
+      className="flex items-center justify-between bg-white border rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition cursor-pointer no-underline hover:no-underline"
+    >
+      <div className="flex items-center gap-3">
+        <img src={exam.link} alt="logo" className="w-8 h-8 object-contain" />
+        <span className="font-medium text-gray-800">{exam.title}</span>
+      </div>
+      <FaChevronRight className="text-gray-400" />
+    </a>
+  ))}
+</div>
+
 
           <div className="mt-6 flex justify-center">
             <a href="/all-exams" className="text-cyan-500 text-base font-medium hover:underline">

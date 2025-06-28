@@ -27,7 +27,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full min-h-[300px] overflow-hidden">
+    <div   className="relative w-full min-h-[300px] overflow-hidden">
       <img
         src={images[currentIndex]}
         alt="slider"
