@@ -4,20 +4,63 @@ import {
   FaGavel, FaTrain, FaCogs, FaBuilding, FaLandmark, FaUserShield,
   FaHeartbeat, FaStethoscope, FaList
 } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 const categoryData = {
-  'SSC Exams': ['Army GD Agniveer', 'Army Clerk Agniveer', 'CDS', 'NDA', 'Airforce Group X'],
-  'Banking Exams': ['BSF Head Constable', 'AFCAT', 'Indian Army Agniveer'],
-  'Teaching Exams': ['Indian Coast Guard Navik', 'CAPF HCM ASI', 'Army Technical Agniveer'],
-  'Civil Services Exam': ['UPSC CAPF AC', 'CRPF Constable', 'Territorial Army'],
-  'Railways Exams': ['Indian Navy SSR', 'CRPF Head Constable', 'CISF Constable'],
-  'Engineering Recruitment Exams': ['ITBP Constable', 'BSF Constable', 'CISF Head Constable'],
-  'Defence Exams': ['Indian Army Nursing', 'Indian Airforce Agniveer', 'Indian Navy Agniveer'],
-  'State Govt. Exams': ['Indian Coast Guard Yantrik', 'Indian Navy SSR Medical'],
-  'Police Exams': ['Army Havildar SAC', 'CISF Tradesman'],
-  'Insurance Exams': ['LIC AAO', 'NIACL AO'],
-  'Nursing Exams': ['AIIMS Nursing Officer'],
-  'Other Govt. Exams': ['Territorial Army']
+  'SSC Exams': [
+    { name: 'Army GD Agniveer', link: '/exams/army-gd-agniveer' },
+    { name: 'Army Clerk Agniveer', link: '/exams/army-clerk-agniveer' },
+    { name: 'CDS', link: '/exams/cds' },
+    { name: 'NDA', link: '/exams/nda' },
+    { name: 'Airforce Group X', link: '/exams/airforce-group-x' }
+  ],
+  'Banking Exams': [
+    { name: 'BSF Head Constable', link: '/exams/bsf-head-constable' },
+    { name: 'AFCAT', link: '/exams/afcat' },
+    { name: 'Indian Army Agniveer', link: '/exams/indian-army-agniveer' }
+  ],
+  'Teaching Exams': [
+    { name: 'Indian Coast Guard Navik', link: '/exams/indian-coast-guard-navik' },
+    { name: 'CAPF HCM ASI', link: '/exams/capf-hcm-asi' },
+    { name: 'Army Technical Agniveer', link: '/exams/army-technical-agniveer' }
+  ],
+  'Civil Services Exam': [
+    { name: 'UPSC CAPF AC', link: '/exams/upsc-capf-ac' },
+    { name: 'CRPF Constable', link: '/exams/crpf-constable' },
+    { name: 'Territorial Army', link: '/exams/territorial-army' }
+  ],
+  'Railways Exams': [
+    { name: 'Indian Navy SSR', link: '/exams/indian-navy-ssr' },
+    { name: 'CRPF Head Constable', link: '/exams/crpf-head-constable' },
+    { name: 'CISF Constable', link: '/exams/cisf-constable' }
+  ],
+  'Engineering Recruitment Exams': [
+    { name: 'ITBP Constable', link: '/exams/itbp-constable' },
+    { name: 'BSF Constable', link: '/exams/bsf-constable' },
+    { name: 'CISF Head Constable', link: '/exams/cisf-head-constable' }
+  ],
+  'Defence Exams': [
+    { name: 'Indian Army Nursing', link: '/exams/indian-army-nursing' },
+    { name: 'Indian Airforce Agniveer', link: '/exams/indian-airforce-agniveer' },
+    { name: 'Indian Navy Agniveer', link: '/exams/indian-navy-agniveer' }
+  ],
+  'State Govt. Exams': [
+    { name: 'Indian Coast Guard Yantrik', link: '/exams/indian-coast-guard-yantrik' },
+    { name: 'Indian Navy SSR Medical', link: '/exams/indian-navy-ssr-medical' }
+  ],
+  'Police Exams': [
+    { name: 'Army Havildar SAC', link: '/exams/army-havildar-sac' },
+    { name: 'CISF Tradesman', link: '/exams/cisf-tradesman' }
+  ],
+  'Insurance Exams': [
+    { name: 'LIC AAO', link: '/exams/lic-aao' },
+    { name: 'NIACL AO', link: '/exams/niacl-ao' }
+  ],
+  'Nursing Exams': [
+    { name: 'AIIMS Nursing Officer', link: '/exams/aiims-nursing-officer' }
+  ],
+  'Other Govt. Exams': [
+    { name: 'Territorial Army', link: '/exams/territorial-army' }
+  ]
 };
 
 const icons = [
@@ -32,17 +75,13 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-white shadow-md relative z-50">
-      {/* Top Navbar */}
       <div className="flex items-center justify-between px-6 py-3">
-        {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src="/imgi_127_loader.gif" alt="logo" className="w-9 h-9" />
-          <span className="text-3xl font-bold text-[#0AD0F4]">testbook</span>
+          <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[200px] h-[50px]" />
         </div>
 
-        {/* Center Menu */}
         <div className="flex space-x-6 items-center relative">
-          {/* Exams Dropdown Wrapper */}
+          {/* Dropdown Trigger */}
           <div
             className="relative"
             onMouseEnter={() => setShowDropdown(true)}
@@ -51,15 +90,13 @@ const Navbar = () => {
               setActiveCategory(null);
             }}
           >
-            <div className="flex items-center text-gray-800 hover:text-blue-600 cursor-pointer">
+            <div className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
               <span>Exams</span>
-              <FaChevronDown className="ml-1 text-xs" />
+            <FaChevronDown className="ml-1 text-xs" />
             </div>
 
-            {/* Dropdown */}
             {showDropdown && (
               <div className="absolute top-full left-0 w-[900px] bg-white shadow-xl border flex z-50">
-                {/* Left Side Category List */}
                 <div className="w-64 border-r">
                   {categories.map((category, i) => {
                     const Icon = icons[i % icons.length];
@@ -78,30 +115,46 @@ const Navbar = () => {
                   })}
                 </div>
 
-                {/* Right Side Items */}
-                <div className="grid grid-cols-3 gap-4 p-4 w-[1300px] h-[200px]">
+                <div className="grid grid-cols-3 gap-4 p-4 w-[1300px] h-[200px] overflow-y-auto">
                   {activeCategory &&
-                    categoryData[activeCategory].map((item) => (
-                      <div
-                        key={item}
-                        className="flex items-center gap-2 p-2 border rounded hover:shadow hover:bg-gray-50 cursor-pointer"
+                    categoryData[activeCategory].map(({ name, link }) => (
+                      <a
+                        key={name}
+                        href={link}
+                        className="flex items-center gap-2 p-2 border rounded hover:shadow hover:bg-gray-50 cursor-pointer text-gray-800 hover:text-sky-400"
                       >
                         <div className="w-6 h-6 bg-red-500 rounded-full"></div>
-                        <span className="text-sm ">{item}</span>
-                      </div>
+                        <span className="text-sm">{name}</span>
+                      </a>
                     ))}
                 </div>
               </div>
             )}
           </div>
 
-          {/* Other Items */}
-          {['SuperCoaching', 'Test Series', 'Skill Academy', 'Pass', 'More'].map((item) => (
-            <div key={item} className="flex items-center text-gray-800 hover:text-blue-600 cursor-pointer">
-              <span>{item}</span>
-              <FaChevronDown className="ml-1 text-xs" />
-            </div>
-          ))}
+          {/* Other Nav Items */}
+  <Link to="/supercoaching" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
+  <span>SuperCoaching</span>
+  
+</Link>
+<Link to="/test-series" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
+  <span>Test Series</span>
+  
+</Link>
+<Link to="/skill-academy" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
+  <span>Skill Academy</span>
+  
+</Link>
+<Link to="/pass" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
+  <span>Pass</span>
+  
+</Link>
+<Link to="/more" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
+  <span>More</span>
+  
+</Link>
+
+
 
           {/* Search */}
           <div className="flex items-center bg-gray-100 rounded px-3 py-1 ml-4">

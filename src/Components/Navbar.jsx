@@ -40,23 +40,23 @@ const [activeCategory, setActiveCategory] = useState(null);
       {showDropdown && (
         <div className="absolute top-full left-0 w-[900px] bg-white shadow-xl border flex z-50">
           {/* Left Category List */}
-          <div className="w-64 border-r">
-            {categories.map((category, i) => {
-              const Icon = icons[i % icons.length];
-              return (
-                <div
-                  key={category}
-                  onMouseEnter={() => setActiveCategory(category)}
-                  className={`flex items-center p-3 cursor-pointer hover:bg-gray-100 ${
-                    activeCategory === category ? 'bg-gray-100' : ''
-                  }`}
-                >
-                  <Icon className="mr-2 text-blue-600" />
-                  <span>{category}</span>
-                </div>
-              );
-            })}
-          </div>
+         <div className="w-64 border-r max-h-64 overflow-y-auto">
+  {categories.map((category, i) => {
+    const Icon = icons[i % icons.length];
+    return (
+      <div
+        key={category}
+        onMouseEnter={() => setActiveCategory(category)}
+        className={`flex items-center p-3 cursor-pointer hover:bg-gray-100 ${
+          activeCategory === category ? 'bg-gray-100' : ''
+        }`}
+      >
+        <Icon className="mr-2 text-blue-600" />
+        <span>{category}</span>
+      </div>
+    );
+  })}
+</div>
 
           {/* Right Exam Grid */}
           <div className="grid grid-cols-3 gap-4 p-4 w-[100px] h-[100px]">
