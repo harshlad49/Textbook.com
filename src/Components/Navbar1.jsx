@@ -79,7 +79,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Right Side Items */}
-                <div className="grid grid-cols-3 gap-4 p-4 w-[600px]">
+                <div className="grid grid-cols-3 gap-4 p-4 w-[1300px] h-[200px]">
                   {activeCategory &&
                     categoryData[activeCategory].map((item) => (
                       <div
@@ -87,7 +87,7 @@ const Navbar = () => {
                         className="flex items-center gap-2 p-2 border rounded hover:shadow hover:bg-gray-50 cursor-pointer"
                       >
                         <div className="w-6 h-6 bg-red-500 rounded-full"></div>
-                        <span className="text-sm font-medium">{item}</span>
+                        <span className="text-sm ">{item}</span>
                       </div>
                     ))}
                 </div>
@@ -116,7 +116,6 @@ const Navbar = () => {
 
         {/* Right Buttons */}
         <div className="flex items-center space-x-4">
-          <button className="text-sm border border-gray-300 px-2 py-1 rounded">🌐</button>
           <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
             Get Started
           </button>
