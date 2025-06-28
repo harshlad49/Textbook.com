@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGooglePlay, FaApple, FaCheckCircle, FaTrophy, FaClipboardList, FaChalkboardTeacher } from "react-icons/fa";
+import { FaGooglePlay, FaApple, FaCheckCircle, FaTrophy, FaClipboardList, FaChalkboardTeacher,FaCaretRight } from "react-icons/fa";
 
 const ExamPreparation = () => {
   return (
@@ -10,8 +10,8 @@ const ExamPreparation = () => {
       </h1>
 
      
-      <p className="mt-2 text-lg text-gray-700">
-        Learn <span className="text-green-600">▶</span> Practice <span className="text-green-600">▶</span> Improve <span className="text-green-600">▶</span> Succeed
+      <p className="mt-2 text-lg text-gray-700 items-center flex">
+        Learn <span className="text-green-600"><FaCaretRight className="text-xl"/> </span> Practice <span className="text-green-600"><FaCaretRight className="text-xl"/></span> Improve <span className="text-green-600"><FaCaretRight className="text-xl"/></span> Succeed
       </p>
 
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">

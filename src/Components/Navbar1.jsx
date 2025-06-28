@@ -5,6 +5,7 @@ import {
   FaHeartbeat, FaStethoscope, FaList
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import Login from './pages/Login';
 const categoryData = {
   'SSC Exams': [
     { name: 'Army GD Agniveer', link: '/exams/army-gd-agniveer' },
@@ -72,8 +73,9 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
   const categories = Object.keys(categoryData);
-
+const [showLogin, setShowLogin] = useState(false);
   return (
+    <>
     <nav className="w-full bg-white shadow-md relative z-50">
       <div className="flex items-center justify-between px-6 py-3">
         <div className="flex items-center space-x-3">
@@ -169,12 +171,17 @@ const Navbar = () => {
 
         {/* Right Buttons */}
         <div className="flex items-center space-x-4">
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+           <button
+            onClick={() => setShowLogin(true)}
+            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+          >
             Get Started
           </button>
         </div>
       </div>
     </nav>
+    <Login show={showLogin} onClose={() => setShowLogin(false)} />
+    </>
   );
 };
 

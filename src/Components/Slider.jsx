@@ -34,7 +34,7 @@ const Slider = () => {
         className="w-full h-full object-cover transition duration-500"
       />
 
-      {/* Left Arrow */}
+    
       <button
         onClick={goToPrevious}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-black p-2 rounded-full"
@@ -42,7 +42,7 @@ const Slider = () => {
         <FaAngleLeft />
       </button>
 
-      {/* Right Arrow */}
+      
       <button
         onClick={goToNext}
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-black p-2 rounded-full"
@@ -50,7 +50,7 @@ const Slider = () => {
         <FaChevronRight />
       </button>
 
-      {/* Blue Dots */}
+      
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <div
