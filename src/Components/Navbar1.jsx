@@ -75,6 +75,8 @@ const Navbar = () => {
   const categories = Object.keys(categoryData);
 const [showLogin, setShowLogin] = useState(false);
 const [showMoreDropdown, setShowMoreDropdown] = useState(false);
+const [searchQuery, setSearchQuery] = useState('');
+
   return (
     <>
     <nav className="w-full bg-white shadow-md relative z-50">
@@ -184,13 +186,22 @@ const [showMoreDropdown, setShowMoreDropdown] = useState(false);
           {/* Search */}
           <div className="flex items-center bg-gray-100 rounded px-3 py-1 w-[400px] h-[50px] ml-4">
             
-            <input
-              type="text"
-              placeholder="Search"
-              className="bg-transparent outline-none w-[350px] h-[50px] ml-2 text-sm"
-            />
+ <input
+  type="text"
+  placeholder="Search"
+  value={searchQuery}
+  
+  onChange={(e) => setSearchQuery(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter') {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+    }
+  }}
+  className="bg-transparent outline-none w-[350px] h-[50px] ml-2 text-sm"
+/>
             <FaSearch className="text-gray-500 text-sm" />
           </div>
+         
         </div>
 
         {/* Right Buttons */}
