@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Login = ({ show, onClose }) => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false); // Sign Up page first
 
   if (!show) return null;
 
@@ -20,7 +20,6 @@ const Login = ({ show, onClose }) => {
               : "Sign up quickly using your Mobile Number"}
           </p>
 
-          
           {isLogin ? (
             <>
               <input
@@ -42,12 +41,10 @@ const Login = ({ show, onClose }) => {
             />
           )}
 
-         
           <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 mb-4">
             {isLogin ? "Continue" : "Sign Up"}
           </button>
 
-         
           <p className="mt-6 text-sm">
             {isLogin ? (
               <>
@@ -72,7 +69,6 @@ const Login = ({ show, onClose }) => {
             )}
           </p>
 
-         
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-xl text-gray-600 hover:text-gray-800"
@@ -81,7 +77,6 @@ const Login = ({ show, onClose }) => {
           </button>
         </div>
 
-       
         <div className="w-1/2 h-full">
           <img
             src="https://cdn.testbook.com/1746180900063-4ac36c61f3df1d5ddfb8993429556a8ca5a8e0cc.png/1746180902.png"
@@ -93,5 +88,6 @@ const Login = ({ show, onClose }) => {
     </div>
   );
 };
+
 
 export default Login;
