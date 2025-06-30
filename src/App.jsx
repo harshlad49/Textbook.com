@@ -24,9 +24,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search/>} />
         <Route path="/exams/army-gd-agniveer" element={<ArmyGdAgniveer />} />
-        <Route path="/Components/pages/SuperCoaching" element={<SuperCoaching />} />
-        <Route path="/Components/pages/TestSeries" element={<TestSeries />} />
-        <Route path="/Components/pages/SkillAcademy" element={<SkillAcademy />} />
+        <Route path="/SuperCoaching" element={<SuperCoaching />} />
+        <Route path="/TestSeries" element={<TestSeries />} />
+        <Route path="/SkillAcademy" element={<SkillAcademy />} />
 
 
 

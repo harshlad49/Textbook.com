@@ -80,7 +80,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 w-full bg-white shadow-md relative z-50">
+      <nav className="sticky top-0 w-full bg-white shadow-md  z-50">
         <div className="flex items-center justify-between px-6 py-3">
           <Link to="/">
             <div className="flex items-center space-x-3 cursor-pointer">
@@ -148,9 +148,9 @@ const Navbar = () => {
             </div>
 
             {/* Other Nav Items */}
-            <Link to="/supercoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
-            <Link to="/test-series" className="text-gray-800 hover:text-sky-400">Test Series</Link>
-            <Link to="/skill-academy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
+            <Link to="/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
+            <Link to="/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
+            <Link to="/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
 
             {/* More Dropdown */}
             <div
