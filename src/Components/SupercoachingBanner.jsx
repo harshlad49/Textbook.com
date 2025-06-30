@@ -2,7 +2,7 @@ import React from "react";
 
 const features = [
   {
-    icon: "imgi_62_Union (1)_All_1662718485.svg",
+    icon: "imgi_61_Union_All_1662718411.svg",
     title: "Courses by Super Teachers",
   },
   {
@@ -10,19 +10,19 @@ const features = [
     title: "Daily Live Classes by Experts",
   },
   {
-    icon: "imgi_62_Union (1)_All_1662718485.svg",
+    icon: "imgi_63_Union2_All_1662718530.svg",
     title: "Complete Study Material",
   },
   {
-    icon: "imgi_62_Union (1)_All_1662718485.svg",
+    icon: "imgi_64_Union3_All_1662718570.svg",
     title: "Practice Questions",
   },
   {
-    icon: "imgi_62_Union (1)_All_1662718485.svg",
+    icon: "imgi_64_Union3_All_1662718570.svg",
     title: "Quick Doubt Resolution by Experts",
   },
   {
-    icon: "imgi_62_Union (1)_All_1662718485.svg",
+    icon: "imgi_65_Shape_All_1662718636.svg",
     title: "Access to 50,000+ Mock Test",
   },
 ];

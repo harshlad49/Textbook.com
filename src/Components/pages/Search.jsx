@@ -11,7 +11,7 @@ const Search = () => {
     item.name.toLowerCase().includes(query)
   );
   return (
-      <div className="p-6 max-w-6xl h-[700px] mx-auto">
+    <div className="p-6 max-w-6xl h-[700px] mx-auto">
       <h1 className="text-xl font-semibold mb-4">Search Results for: "{query}"</h1>
 
       {filteredItems.length === 0 ? (
