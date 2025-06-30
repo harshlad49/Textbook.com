@@ -73,33 +73,23 @@ const icons = [
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
-  const categories = Object.keys(categoryData);
   const [showLogin, setShowLogin] = useState(false);
   const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const categories = Object.keys(categoryData);
 
   return (
     <>
-<<<<<<< HEAD
-      <nav className="w-full bg-white shadow-md relative z-50">
-        <div className="flex items-center justify-between px-6 py-3">
-          <div className="flex items-center space-x-3">
-            <Link to="/">
-              <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[150px] h-[30px]" />
-            </Link>
-          </div>
-=======
-      <nav className=" sticky top-0 w-full bg-white shadow-md relative z-50">
+      <nav className="sticky top-0 w-full bg-white shadow-md relative z-50">
         <div className="flex items-center justify-between px-6 py-3">
           <Link to="/">
-          <div className="flex items-center space-x-3 cursor-pointer">
-            <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[150px] h-[30px]" />
-          </div>
+            <div className="flex items-center space-x-3 cursor-pointer">
+              <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[150px] h-[30px]" />
+            </div>
           </Link>
->>>>>>> 75ad184be5af63e4620ff576bc681a4d80c34b21
 
           <div className="flex space-x-6 items-center relative">
-            {/* Dropdown Trigger */}
+            {/* Exams Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => setShowDropdown(true)}
@@ -112,125 +102,10 @@ const Navbar = () => {
                 <span>Exams</span>
                 <FaChevronDown className="ml-1 text-xs" />
               </div>
-<<<<<<< HEAD
 
               {showDropdown && (
                 <div className="absolute top-full left-0 w-[1150px] h-[700px] bg-white shadow-xl border flex z-50">
-                  {/* Category List */}
-                  <div className="w-64 border-r">
-                    {categories.map((category, i) => {
-                      const Icon = icons[i % icons.length];
-                      return (
-                        <div
-                          key={category}
-                          onMouseEnter={() => setActiveCategory(category)}
-                          className={`flex items-center justify-between p-3 cursor-pointer hover:bg-gray-100 ${activeCategory === category ? 'bg-gray-100' : ''
-                            }`}
-                        >
-                          <div className="flex items-center space-x-2">
-                            <Icon className="text-blue-600" />
-                            <span>{category}</span>
-                          </div>
-                          <FaChevronRight className="text-gray-400 text-sm" />
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-4 p-4 w-[1300px] h-[200px] overflow-y-auto">
-                    {activeCategory &&
-                      categoryData[activeCategory].map(({ name, link, image }) => (
-                        <a
-                          key={name}
-                          href={link}
-                          className="flex items-center gap-2 p-2 border rounded hover:shadow h-[60px] w-full hover:bg-gray-50 cursor-pointer text-gray-800 hover:text-sky-400"
-                        >
-                          <img src={image} alt={name} className="w-10 h-10 object-cover rounded" />
-                          <span className="text-sm">{name}</span>
-                        </a>
-                      ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Other Nav Items */}
-            <Link to="/supercoaching" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
-              <span>SuperCoaching</span>
-
-            </Link>
-            <Link to="/test-series" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
-              <span>Test Series</span>
-
-            </Link>
-            <Link to="/skill-academy" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
-              <span>Skill Academy</span>
-
-            </Link>
-            {/* <Link to="/pass" className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
-  <span>Pass</span>
-  
-</Link> */}
-            <div
-              className="relative"
-              onMouseEnter={() => setShowMoreDropdown(true)}
-              onMouseLeave={() => setShowMoreDropdown(false)}
-            >
-              <div className="flex items-center text-gray-800 hover:text-sky-400 cursor-pointer">
-                <span>More</span>
-                <FaChevronDown className="ml-1 text-xs" />
-              </div>
-
-              {showMoreDropdown && (
-                <div className="absolute top-full left-0 w-48 bg-white border shadow-lg rounded-md z-50">
-                  <Link
-                    to="/live-classes"
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-sky-500"
-                  >
-                    Live Classes
-                  </Link>
-                  {/* Add more dropdown links here if needed */}
-                </div>
-              )}
-            </div>
-
-
-
-            {/* Search */}
-            <div className="flex items-center bg-gray-100 rounded px-3 py-1 w-[400px] h-[50px] ml-4">
-
-              <input
-                type="text"
-                placeholder="Search"
-                value={searchQuery}
-
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
-                    window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
-                  }
-                }}
-                className="bg-transparent outline-none w-[350px] h-[50px] ml-2 text-sm"
-              />
-              <FaSearch className="text-gray-500 text-sm" />
-            </div>
-
-          </div>
-
-          {/* Right Buttons */}
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={() => setShowLogin(true)}
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
-            >
-              Get Started
-            </button>
-          </div>
-=======
-
-              {showDropdown && (
-                <div className="absolute top-full left-0 w-[1150px] h-[700px] bg-white shadow-xl border flex z-50">
-                  {/* Category List */}
+                  {/* Categories List */}
                   <div className="w-64 border-r">
                     {categories.map((category, i) => {
                       const Icon = icons[i % icons.length];
@@ -273,9 +148,9 @@ const Navbar = () => {
             </div>
 
             {/* Other Nav Items */}
-            <Link to="/Components/pages/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
-            <Link to="/Components/pages/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
-            <Link to="/Components/pages/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
+            <Link to="/supercoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
+            <Link to="/test-series" className="text-gray-800 hover:text-sky-400">Test Series</Link>
+            <Link to="/skill-academy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
 
             {/* More Dropdown */}
             <div
@@ -322,9 +197,9 @@ const Navbar = () => {
               Get Started
             </button>
           </div>
->>>>>>> 75ad184be5af63e4620ff576bc681a4d80c34b21
         </div>
       </nav>
+
       <Login show={showLogin} onClose={() => setShowLogin(false)} />
     </>
   );
