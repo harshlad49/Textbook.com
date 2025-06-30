@@ -148,9 +148,9 @@ const Navbar = () => {
             </div>
 
             {/* Other Nav Items */}
-            <Link to="/Components/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
-            <Link to="/Components/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
-            <Link to="/Components/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
+            <Link to="/Components/pages/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
+            <Link to="/Components/pages/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
+            <Link to="/Components/pages/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
 
             {/* More Dropdown */}
             <div
