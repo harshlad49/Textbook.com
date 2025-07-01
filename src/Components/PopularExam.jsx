@@ -55,7 +55,7 @@ const PopularExams = () => {
         Get exam-ready with concepts, questions and study notes as per the latest pattern
       </p>
 
-      {/* Tabs Slider */}
+      
       <div className="relative mb-6 border border-r-2">
         <div className="flex items-center gap-2">
           <button
