@@ -2,14 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { FaAngleLeft, FaChevronRight } from "react-icons/fa6";
 
 const images = [
-  {
-    url: 'https://blogmedia.testbook.com/blog/wp-content/uploads/2025/03/1752x406-1769d17b.png',
-    bg: "/imgi_131_1752x406.-background-81551023.jpg"
-  },
-  {
-    url: 'https://blogmedia.testbook.com/blog/wp-content/uploads/2025/04/1752x406.png-text-932ea2a0.png',
-    bg: "/imgi_154_381x152-2-f2758971.png"
-  }
+  'https://blogmedia.testbook.com/blog/wp-content/uploads/2025/03/1752x406-1769d17b.png',
+  'https://blogmedia.testbook.com/blog/wp-content/uploads/2025/04/1752x406.png-text-932ea2a0.png',
 ];
 
 const Slider = () => {
@@ -32,23 +26,15 @@ const Slider = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  const currentImage = images[currentIndex];
-
   return (
-    <div
-      className="relative w-full min-h-[300px] overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: currentImage.bg
-          ? `url(${currentImage.bg})`
-          : 'none'
-      }}
-    >
+    <div   className="relative w-full min-h-[300px] overflow-hidden">
       <img
-        src={currentImage.url}
+        src={images[currentIndex]}
         alt="slider"
         className="w-full h-full object-cover transition duration-500"
       />
 
+    
       <button
         onClick={goToPrevious}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-black p-2 rounded-full"
@@ -56,6 +42,7 @@ const Slider = () => {
         <FaAngleLeft />
       </button>
 
+      
       <button
         onClick={goToNext}
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-black p-2 rounded-full"
@@ -63,6 +50,7 @@ const Slider = () => {
         <FaChevronRight />
       </button>
 
+      
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <div

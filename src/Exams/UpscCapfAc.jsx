@@ -1,19 +1,11 @@
-// src/components/HeroBanner.jsx
-import React from "react";
+import React from 'react';
 import { FaUserGraduate } from "react-icons/fa";
-
+import { Link } from 'react-router-dom';
 import { FiDownload } from "react-icons/fi";
 
-const HeroBanner = () => {
+const UpscCapfAc = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-6 px-8">
-      {/* Breadcrumb */}
-      {/* <div className="text-sm text-gray-500 flex items-center gap-1 mb-3">
-        <span>Home</span>
-        <IoIosArrowForward className="text-gray-400" />
-        <span className="text-blue-500 font-medium">SSC CGL</span>
-      </div> */}
-
       {/* Main Content */}
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
         {/* Left Side */}
@@ -38,14 +30,26 @@ const HeroBanner = () => {
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 mt-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2 rounded">
-                Get started for free!
-              </button>
-              <button className="flex items-center gap-2 border border-cyan-500 text-cyan-600 hover:bg-cyan-50 px-5 py-2 rounded font-medium">
-                <FiDownload />
-                Download as PDF
-              </button>
+            <div className="flex gap-4 mt-4 flex-wrap">
+              <Link to="/uppsc-quiz">
+                <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+                  Get started for free!
+                </button>
+              </Link>
+
+              <Link to="/quiz/civilservice/Upscquiz">
+                <button className="flex items-center gap-2 border border-cyan-500 text-cyan-600 hover:bg-cyan-50 px-5 py-2 rounded font-medium">
+                  <FiDownload />
+                  Download as PDF
+                </button>
+              </Link>
+             <Link to="/quiz/civilservice/UpscQuiz">
+  <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded">
+    Start Now
+  </button>
+</Link>
+
+
             </div>
           </div>
         </div>
@@ -61,4 +65,4 @@ const HeroBanner = () => {
   );
 };
 
-export default HeroBanner;
+export default UpscCapfAc;
