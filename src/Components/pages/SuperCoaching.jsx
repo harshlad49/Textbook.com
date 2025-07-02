@@ -48,7 +48,7 @@ const SuperCoaching = () => {
 
   return (
     <div className="bg-[#f8fafc] min-h-screen">
-      {/* Hero Section */}
+      
       <div className="bg-[#edf0ff] py-16 text-center">
         <div className="text-3xl font-bold text-[#1f1f50] mb-6">
           <span className="text-pink-600">Super</span>coaching
@@ -84,9 +84,8 @@ const SuperCoaching = () => {
         </div>
       </div>
 
-      {/* Sidebar + Courses */}
       <div className="flex flex-col md:flex-row max-w-7xl mx-auto mt-8">
-        {/* Sidebar */}
+       
         <div className="w-full md:w-64 p-4 border-r bg-white h-full">
           <ul className="space-y-2 text-sm">
             {menuItems.map((item, index) => (
@@ -104,7 +103,7 @@ const SuperCoaching = () => {
           </ul>
         </div>
 
-        {/* Courses */}
+       
         <div className="flex-1 p-4">
           <h2 className="text-xl font-semibold mb-4">Popular SuperCoaching</h2>
           {courses.map((course, index) => (

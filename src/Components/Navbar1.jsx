@@ -201,22 +201,26 @@ const [examMenuOpen, setExamMenuOpen] = useState(false);
     </div>
   )}
 </div>
-    <Link to="/SuperCoaching" className="flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">SuperCoaching</Link>
-    <Link to="/TestSeries" className="block text-gray-800 hover:text-sky-500">Test Series</Link>
-    <Link to="/SkillAcademy" className="block text-gray-800 hover:text-sky-500">Skill Academy</Link>
-    <Link to="/live-classes" className="block text-gray-800 hover:text-sky-500">Live Classes</Link>
-    
-    {!menuOpen && (
-      <button
-        onClick={() => {
-          setShowLogin(true);
-          setMenuOpen(false);
-        }}
-        className="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
-      >
-        Get Started
-      </button>
-    )}
+    <Link to="/SuperCoaching" className=" mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">SuperCoaching</Link>
+    <Link to="/TestSeries" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Test Series</Link>
+    <Link to="/SkillAcademy" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Skill Academy</Link>
+    <Link to="/live-classes" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Live Classes</Link>
+     <div className="flex items-center bg-gray-100 rounded px-3 py-1 w-[250px] h-[50px] ml-4 mt-5">
+              <input
+                type="text"
+                placeholder="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+                  }
+                }}
+                className="bg-transparent outline-none w-[350px] h-[50px] ml-2 text-sm"
+              />
+              <FaSearch className="text-gray-500  text-xl" />
+            </div>
+
   </div>
 
 

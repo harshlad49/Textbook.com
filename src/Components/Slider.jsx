@@ -33,12 +33,13 @@ const Slider = () => {
     <div   className="relative w-full min-h-[300px] bg-cover bg-center"
       style={{ backgroundImage: `url(${imagePath[currentIndex]})` }}
 >
+<div>
       <img
         src={images[currentIndex]}
         alt="slider"
-        className="w-full h-full object-cover transition duration-500"
+        className="w-full h-full object-cover transition duration-500 "
       />
-
+</div>
     
       <button
         onClick={goToPrevious}

@@ -4,20 +4,18 @@ import { Routes, Route } from 'react-router-dom';
 
 import Navbar1 from './Components/Navbar1';
 import Footer from './Components/Footer';
-// Pages
+
 import Home from './Components/pages/Home';
 import Search from './Components/pages/Search';
 import SuperCoaching from './Components/pages/SuperCoaching';
 import TestSeries from './Components/pages/TestSeries';
 import SkillAcademy from './Components/pages/SkillAcademy';
 
-// Exams
 import ArmyGdAgniveer from './Exams/ArmyGdAgniveer';
 import UpscCapfAc from './Exams/UpscCapfAc';
 import Crpfconstable from './Exams/Crpfconstable';
 import TerritorialArmy from './Exams/TerritorialArmy';
 
-// Quiz Section
 import UpscQuiz from './Exams/Quiz/CivilService/UpscQuiz';
 
 function App() {
@@ -41,7 +39,7 @@ function App() {
 
         {/* Quiz Section */}
         <Route path="/quiz/civilservice/upsc-quiz" element={<UpscQuiz />} />
-        <Route path="/uppsc-quiz" element={<UpscQuiz />} /> {/* optional shortcut */}
+        <Route path="/uppsc-quiz" element={<UpscQuiz />} /> 
       </Routes>
 
       <Footer />

@@ -10,9 +10,15 @@ const ExamPreparation = () => {
       </h1>
 
      
-      <p className="mt-2 text-lg text-gray-700 items-center flex">
-        Learn <span className="text-green-600"><FaCaretRight className="text-xl"/> </span> Practice <span className="text-green-600"><FaCaretRight className="text-xl"/></span> Improve <span className="text-green-600"><FaCaretRight className="text-xl"/></span> Succeed
-      </p>
+    <p className="mt-4 text-lg text-gray-700 flex justify-center items-center gap-2 flex-wrap">
+  Learn
+  <FaCaretRight className="text-green-600 text-2xl" />
+  Practice
+  <FaCaretRight className="text-green-600 text-2xl" />
+  Improve
+  <FaCaretRight className="text-green-600 text-2xl" />
+  Succeed
+</p>
 
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
   <button className="bg-green-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-600">

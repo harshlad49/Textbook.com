@@ -45,7 +45,7 @@ const Phone = () => {
         <div className="relative mt-10  md:mt-0 md:w-1/2 flex justify-center items-center z-50">
           <img
             src="/imgi_80_web-phone.png"
-            alt="Mobile App Preview"
+            alt="Mobile"
             className="w-full h-[700px] md:w-[600px] drop-shadow-2xl"
           />
         </div>
