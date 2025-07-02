@@ -1,7 +1,7 @@
 // src/components/HeroBanner.jsx
 import React from "react";
 import { FaUserGraduate } from "react-icons/fa";
-import { IoIosArrowForward } from "react-icons/io";
+
 import { FiDownload } from "react-icons/fi";
 
 const HeroBanner = () => {
