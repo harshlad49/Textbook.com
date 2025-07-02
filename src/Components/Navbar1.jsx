@@ -102,9 +102,9 @@ const [examMenuOpen, setExamMenuOpen] = useState(false);
               )}
             </div>
 
-            <Link to="/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
-            <Link to="/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
-            <Link to="/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
+            <Link to="/supercoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
+            <Link to="/test-series" className="text-gray-800 hover:text-sky-400">Test Series</Link>
+            <Link to="/skill-academy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
 
             <div
               className="relative"

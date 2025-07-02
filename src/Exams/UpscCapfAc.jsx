@@ -6,18 +6,18 @@ import { FiDownload } from "react-icons/fi";
 const UpscCapfAc = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-6 px-8">
-      {/* Main Content */}
+  
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-        {/* Left Side */}
+       
         <div className="flex items-start gap-4">
-          {/* Logo */}
+       
           <img
             src="https://cdn.testbook.com/resources/productionimages/SSC_All_1594144442.png"
             alt="SSC Logo"
             className="w-16 h-16 object-contain"
           />
 
-          {/* Text Info */}
+        
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 leading-snug">
               SSC CGL Notification 2025 Out, 14582 Vacancies, <br />
@@ -29,7 +29,7 @@ const UpscCapfAc = () => {
               <span>7829.9k+ Students Enrolled</span>
             </div>
 
-            {/* Buttons */}
+         
             <div className="flex gap-4 mt-4 flex-wrap">
               <Link to="/uppsc-quiz">
                 <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
@@ -43,7 +43,7 @@ const UpscCapfAc = () => {
                   Download as PDF
                 </button>
               </Link>
-             <Link to="/quiz/civilservice/UpscQuiz">
+             <Link to="/quiz/civilservice/upsc-quiz">
   <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded">
     Start Now
   </button>
@@ -54,7 +54,7 @@ const UpscCapfAc = () => {
           </div>
         </div>
 
-        {/* Right Image */}
+       
         <img
           src="https://testbook.com/assets/img/banner-bg/bottom-banner-preparation.svg"
           alt="Education illustration"

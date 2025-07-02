@@ -1,6 +1,6 @@
 const categoryData = {
   'SSC Exams': [
-    { name: 'Army GD Agniveer', link: '/exams/army-gd-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Army GD Agniveer', link: '/exams/ArmyGdAgniveer', image: '/imgi_5_SSC_All_1594144442.png' },
     { name: 'Army Clerk Agniveer', link: '/exams/army-clerk-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
     { name: 'CDS', link: '/exams/cds', image: '/imgi_5_SSC_All_1594144442.png' },
     { name: 'NDA', link: '/exams/nda', image: '/imgi_5_SSC_All_1594144442.png' },
@@ -17,9 +17,9 @@ const categoryData = {
     { name: 'Army Technical Agniveer', link: '/exams/army-technical-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
   ],
   'Civil Services Exam': [
-    { name: 'UPSC CAPF AC', link: '/exams/upsc-capf-ac', image: '/imgi_5_SSC_All_1594144442.png' },
-    { name: 'CRPF Constable', link: '/exams/crpf-constable', image: '/imgi_5_SSC_All_1594144442.png' },
-    { name: 'Territorial Army', link: '/exams/territorial-army', image: '/imgi_5_SSC_All_1594144442.png' }
+    { name: 'UPSC CAPF AC', link: '/exams/UpscCapfAc', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CRPF Constable', link: '/exams/Crpfconstable', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Territorial Army', link: '/exams/TerritorialArmy', image: '/imgi_5_SSC_All_1594144442.png' }
   ],
   'Railways Exams': [
     { name: 'Indian Navy SSR', link: '/exams/indian-navy-ssr', image: '/imgi_5_SSC_All_1594144442.png' },
