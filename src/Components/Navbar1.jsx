@@ -6,64 +6,64 @@ import {
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Login from './pages/Login';
-import categoryData from './pages/Constants/categoryData'; 
-// const categoryData = {
-//   'SSC Exams': [
-//     { name: 'Army GD Agniveer', link: '/exams/army-gd-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Army Clerk Agniveer', link: '/exams/army-clerk-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CDS', link: '/exams/cds', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'NDA', link: '/exams/nda', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Airforce Group X', link: '/exams/airforce-group-x', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Banking Exams': [
-//     { name: 'BSF Head Constable', link: '/exams/bsf-head-constable', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'AFCAT', link: '/exams/afcat', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Indian Army Agniveer', link: '/exams/indian-army-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Teaching Exams': [
-//     { name: 'Indian Coast Guard Navik', link: '/exams/indian-coast-guard-navik', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CAPF HCM ASI', link: '/exams/capf-hcm-asi', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Army Technical Agniveer', link: '/exams/army-technical-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Civil Services Exam': [
-//     { name: 'UPSC CAPF AC', link: '/exams/upsc-capf-ac', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CRPF Constable', link: '/exams/crpf-constable', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Territorial Army', link: '/exams/territorial-army', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Railways Exams': [
-//     { name: 'Indian Navy SSR', link: '/exams/indian-navy-ssr', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CRPF Head Constable', link: '/exams/crpf-head-constable', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CISF Constable', link: '/exams/cisf-constable', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Engineering Recruitment Exams': [
-//     { name: 'ITBP Constable', link: '/exams/itbp-constable', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'BSF Constable', link: '/exams/bsf-constable', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CISF Head Constable', link: '/exams/cisf-head-constable', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Defence Exams': [
-//     { name: 'Indian Army Nursing', link: '/exams/indian-army-nursing', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Indian Airforce Agniveer', link: '/exams/indian-airforce-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Indian Navy Agniveer', link: '/exams/indian-navy-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'State Govt. Exams': [
-//     { name: 'Indian Coast Guard Yantrik', link: '/exams/indian-coast-guard-yantrik', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'Indian Navy SSR Medical', link: '/exams/indian-navy-ssr-medical', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Police Exams': [
-//     { name: 'Army Havildar SAC', link: '/exams/army-havildar-sac', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'CISF Tradesman', link: '/exams/cisf-tradesman', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Insurance Exams': [
-//     { name: 'LIC AAO', link: '/exams/lic-aao', image: '/imgi_5_SSC_All_1594144442.png' },
-//     { name: 'NIACL AO', link: '/exams/niacl-ao', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Nursing Exams': [
-//     { name: 'AIIMS Nursing Officer', link: '/exams/aiims-nursing-officer', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ],
-//   'Other Govt. Exams': [
-//     { name: 'Territorial Army', link: '/exams/territorial-army', image: '/imgi_5_SSC_All_1594144442.png' }
-//   ]
-// };
+
+const categoryData = {
+  'SSC Exams': [
+    { name: 'Army GD Agniveer', link: '/exams/army-gd-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Army Clerk Agniveer', link: '/exams/army-clerk-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CDS', link: '/exams/cds', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'NDA', link: '/exams/nda', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Airforce Group X', link: '/exams/airforce-group-x', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Banking Exams': [
+    { name: 'BSF Head Constable', link: '/exams/bsf-head-constable', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'AFCAT', link: '/exams/afcat', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Indian Army Agniveer', link: '/exams/indian-army-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Teaching Exams': [
+    { name: 'Indian Coast Guard Navik', link: '/exams/indian-coast-guard-navik', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CAPF HCM ASI', link: '/exams/capf-hcm-asi', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Army Technical Agniveer', link: '/exams/army-technical-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Civil Services Exam': [
+    { name: 'UPSC CAPF AC', link: '/exams/UpscCapfAc', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CRPF Constable', link: '/exams/Crpfconstable', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Territorial Army', link: '/exams/TerritorialArmy', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Railways Exams': [
+    { name: 'Indian Navy SSR', link: '/exams/indian-navy-ssr', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CRPF Head Constable', link: '/exams/crpf-head-constable', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CISF Constable', link: '/exams/cisf-constable', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Engineering Recruitment Exams': [
+    { name: 'ITBP Constable', link: '/exams/itbp-constable', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'BSF Constable', link: '/exams/bsf-constable', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CISF Head Constable', link: '/exams/cisf-head-constable', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Defence Exams': [
+    { name: 'Indian Army Nursing', link: '/exams/indian-army-nursing', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Indian Airforce Agniveer', link: '/exams/indian-airforce-agniveer', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Indian Navy Agniveer', link: '/exams/indian-navy-agniveer', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'State Govt. Exams': [
+    { name: 'Indian Coast Guard Yantrik', link: '/exams/indian-coast-guard-yantrik', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'Indian Navy SSR Medical', link: '/exams/indian-navy-ssr-medical', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Police Exams': [
+    { name: 'Army Havildar SAC', link: '/exams/army-havildar-sac', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'CISF Tradesman', link: '/exams/cisf-tradesman', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Insurance Exams': [
+    { name: 'LIC AAO', link: '/exams/lic-aao', image: '/imgi_5_SSC_All_1594144442.png' },
+    { name: 'NIACL AO', link: '/exams/niacl-ao', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Nursing Exams': [
+    { name: 'AIIMS Nursing Officer', link: '/exams/aiims-nursing-officer', image: '/imgi_5_SSC_All_1594144442.png' }
+  ],
+  'Other Govt. Exams': [
+    { name: 'Territorial Army', link: '/exams/territorial-army', image: '/imgi_5_SSC_All_1594144442.png' }
+  ]
+};
 
 const icons = [
   FaShieldAlt, FaUniversity, FaChalkboardTeacher, FaGavel, FaTrain, FaCogs,
@@ -73,23 +73,23 @@ const icons = [
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
+  const categories = Object.keys(categoryData);
   const [showLogin, setShowLogin] = useState(false);
   const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const categories = Object.keys(categoryData);
 
   return (
     <>
-      <nav className="sticky top-0 w-full bg-white shadow-md  z-50">
+      <nav className=" sticky top-0 w-full bg-white shadow-md relative z-50">
         <div className="flex items-center justify-between px-6 py-3">
           <Link to="/">
-            <div className="flex items-center space-x-3 cursor-pointer">
-              <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[150px] h-[30px]" />
-            </div>
+          <div className="flex items-center space-x-3 cursor-pointer">
+            <img src="/imgi_85_logo-testbook.svg" alt="logo" className="w-[150px] h-[30px]" />
+          </div>
           </Link>
 
           <div className="flex space-x-6 items-center relative">
-            {/* Exams Dropdown */}
+            {/* Dropdown Trigger */}
             <div
               className="relative"
               onMouseEnter={() => setShowDropdown(true)}
@@ -105,7 +105,7 @@ const Navbar = () => {
 
               {showDropdown && (
                 <div className="absolute top-full left-0 w-[1150px] h-[700px] bg-white shadow-xl border flex z-50">
-                  {/* Categories List */}
+                  {/* Category List */}
                   <div className="w-64 border-r">
                     {categories.map((category, i) => {
                       const Icon = icons[i % icons.length];
@@ -148,9 +148,9 @@ const Navbar = () => {
             </div>
 
             {/* Other Nav Items */}
-            <Link to="/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
-            <Link to="/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
-            <Link to="/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
+            <Link to="/Components/pages/SuperCoaching" className="text-gray-800 hover:text-sky-400">SuperCoaching</Link>
+            <Link to="/Components/pages/TestSeries" className="text-gray-800 hover:text-sky-400">Test Series</Link>
+            <Link to="/Components/pages/SkillAcademy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
 
             {/* More Dropdown */}
             <div
@@ -199,7 +199,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
       <Login show={showLogin} onClose={() => setShowLogin(false)} />
     </>
   );
