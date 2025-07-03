@@ -5,7 +5,10 @@ const images = [
   'https://blogmedia.testbook.com/blog/wp-content/uploads/2025/03/1752x406-1769d17b.png',
   'https://blogmedia.testbook.com/blog/wp-content/uploads/2025/04/1752x406.png-text-932ea2a0.png',
 ];
-
+const imagePath = [
+   '/imgi_131_1752x406.-background-81551023.jpg',
+   '/imgi_154_381x152-2-f2758971.png',
+];
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -27,13 +30,16 @@ const Slider = () => {
   };
 
   return (
-    <div   className="relative w-full min-h-[300px] overflow-hidden">
+    <div   className="relative w-full min-h-[300px] bg-cover bg-center"
+      style={{ backgroundImage: `url(${imagePath[currentIndex]})` }}
+>
+<div>
       <img
         src={images[currentIndex]}
         alt="slider"
-        className="w-full h-full object-cover transition duration-500"
+        className="w-full h-full object-cover transition duration-500 "
       />
-
+</div>
     
       <button
         onClick={goToPrevious}
@@ -51,7 +57,7 @@ const Slider = () => {
       </button>
 
       
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute p-1 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <div
             key={index}
