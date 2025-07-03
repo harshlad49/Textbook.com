@@ -17,7 +17,7 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [activeCategory, setActiveCategory] = useState(null);
   const [showLogin, setShowLogin] = useState(false);
-  const [showMoreDropdown, setShowMoreDropdown] = useState(false);
+  // const [showMoreDropdown, setShowMoreDropdown] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [menuOpen, setMenuOpen] = useState(false); 
   const categories = Object.keys(categoryData);
@@ -106,7 +106,7 @@ const [examMenuOpen, setExamMenuOpen] = useState(false);
             <Link to="/test-series" className="text-gray-800 hover:text-sky-400">Test Series</Link>
             <Link to="/skill-academy" className="text-gray-800 hover:text-sky-400">Skill Academy</Link>
 
-            <div
+            {/* <div
               className="relative"
               onMouseEnter={() => setShowMoreDropdown(true)}
               onMouseLeave={() => setShowMoreDropdown(false)}
@@ -118,10 +118,10 @@ const [examMenuOpen, setExamMenuOpen] = useState(false);
 
               {showMoreDropdown && (
                 <div className="absolute top-full left-0 w-48 bg-white border shadow-lg rounded-md z-50">
-                  <Link to="/live-classes" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-sky-500">Live Classes</Link>
+                  <Link to="/liveClassesPage" className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-sky-500">Live Classes</Link>
                 </div>
               )}
-            </div>
+            </div> */}
 
             <div className="flex items-center bg-gray-100 rounded px-3 py-1 w-[400px] h-[50px] ml-4">
               <input
@@ -204,7 +204,7 @@ const [examMenuOpen, setExamMenuOpen] = useState(false);
     <Link to="/SuperCoaching" className=" mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">SuperCoaching</Link>
     <Link to="/TestSeries" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Test Series</Link>
     <Link to="/SkillAcademy" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Skill Academy</Link>
-    <Link to="/live-classes" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Live Classes</Link>
+    {/* <Link to="/liveClassesPage" className="mt-0 ml-3 space-y-2 flex items-center justify-between text-gray-800 hover:text-sky-500 cursor-pointer">Live Classes</Link> */}
      <div className="flex items-center bg-gray-100 rounded px-3 py-1 w-[250px] h-[50px] ml-4 mt-5">
               <input
                 type="text"

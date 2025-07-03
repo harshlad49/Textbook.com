@@ -9,14 +9,7 @@ const ExamPreparation = () => {
      
       <h1 className="text-2xl md:text-4xl font-semibold">
         One Destination for <span className="text-black font-bold">Complete Exam Preparation</span>
-      </h1> 
-      
-      
-      
-
-
-
-     
+      </h1>      
     <p className="mt-4 text-lg text-gray-700 flex justify-center items-center gap-2 flex-wrap">
   Learn
   <FaCaretRight className="text-green-600 text-2xl" />

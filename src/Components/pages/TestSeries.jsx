@@ -80,14 +80,14 @@ const TestSeries = () => {
           <p className="text-md mt-6 text-gray-800 font-medium">
             814+ exams covered. Which exam are you preparing for?
           </p>
-          <div className="mt-4 relative w-full max-w-xl">
+          {/* <div className="mt-4 relative w-full max-w-xl">
             <input
               type="text"
               placeholder="Search for your Exam"
               className="w-full px-5 py-3 pr-12 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-sm"
             />
             <FaSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-lg" />
-          </div>
+          </div> */}
         </div>
         <div className="flex-1 flex justify-center items-center mt-10 md:mt-0">
           <img

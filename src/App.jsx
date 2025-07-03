@@ -18,6 +18,7 @@ import TerritorialArmy from './Exams/TerritorialArmy';
 
 import UpscQuiz from './Exams/Quiz/CivilService/UpscQuiz';
 
+
 function App() {
   return (
     <>
@@ -40,6 +41,7 @@ function App() {
         {/* Quiz Section */}
         <Route path="/quiz/civilservice/upsc-quiz" element={<UpscQuiz />} />
         <Route path="/uppsc-quiz" element={<UpscQuiz />} /> 
+      
       </Routes>
 
       <Footer />
