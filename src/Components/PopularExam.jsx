@@ -26,14 +26,10 @@ const sscExams = [
   { title: 'Delhi Police Head Constable', link: '/imgi_8_Delhi Police_All_1594144704.png' },
   { title: 'SSC Head Constable AWO TPO', link: '/imgi_12_SSC_All_1594144420.png' },
   { title: 'Delhi Police MTS', link: '/imgi_8_Delhi Police_All_1594144704.png' },
+  
 ];
 
-const getLogo = (title) => {
-  if (title.includes('Delhi')) {
-    return 'https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Delhi_Police_Logo.png/100px-Delhi_Police_Logo.png';
-  }
-  return 'https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Staff_Selection_Commission_logo.png/100px-Staff_Selection_Commission_logo.png';
-};
+
 
 const PopularExams = () => {
   const [activeTab, setActiveTab] = useState('SSC Exams');
@@ -55,7 +51,7 @@ const PopularExams = () => {
         Get exam-ready with concepts, questions and study notes as per the latest pattern
       </p>
 
-      {/* Tabs Slider */}
+      
       <div className="relative mb-6 border border-r-2">
         <div className="flex items-center gap-2">
           <button

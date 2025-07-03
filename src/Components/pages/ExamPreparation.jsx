@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaGooglePlay, FaApple, FaCheckCircle, FaTrophy, FaClipboardList, FaChalkboardTeacher,FaCaretRight } from "react-icons/fa";
-
+import Login from './Login';
 const ExamPreparation = () => {
+  const [showLogin, setShowLogin] = useState(false);
   return (
+    <>
     <div className="text-center px-4 py-12 bg-white">
      
       <h1 className="text-2xl md:text-4xl font-semibold">
         One Destination for <span className="text-black font-bold">Complete Exam Preparation</span>
-      </h1>
+      </h1> 
+      
+      
+      
+
+
 
      
     <p className="mt-4 text-lg text-gray-700 flex justify-center items-center gap-2 flex-wrap">
@@ -21,7 +28,8 @@ const ExamPreparation = () => {
 </p>
 
     <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
-  <button className="bg-green-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-600">
+
+  <button onClick={() => setShowLogin(true)} className="bg-green-500 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-600">
     Get Started For Free
   </button>
   <div className="flex gap-3">
@@ -33,9 +41,7 @@ const ExamPreparation = () => {
     </div>
   </div>
 </div>
-
-
-      {/* Stats Section */}
+   
       <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 px-4 max-w-6xl mx-auto">
         <div className="bg-green-100 p-6 rounded-lg flex flex-col items-center">
           <FaCheckCircle className="text-green-600 text-3xl mb-2" />
@@ -59,6 +65,8 @@ const ExamPreparation = () => {
         </div>
       </div>
     </div>
+     <Login show={showLogin} onClose={() => setShowLogin(false)} />
+    </>
   );
 };
 
