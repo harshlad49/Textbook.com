@@ -37,7 +37,7 @@ const UpscCapfAc = () => {
                 </button>
               </Link>
 
-              <Link to="/quiz/civilservice/Upscquiz">
+              <Link to="/quiz/Ssc/ArmyGdQuiz">
                 <button className="flex items-center gap-2 border border-cyan-500 text-cyan-600 hover:bg-cyan-50 px-5 py-2 rounded font-medium">
                   <FiDownload />
                   Download as PDF

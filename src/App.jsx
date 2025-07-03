@@ -16,7 +16,11 @@ import UpscCapfAc from './Exams/UpscCapfAc';
 import Crpfconstable from './Exams/Crpfconstable';
 import TerritorialArmy from './Exams/TerritorialArmy';
 
+
 import UpscQuiz from './Exams/Quiz/CivilService/UpscQuiz';
+import ArmyGdQuiz from "./Exams/Quiz/Ssc/ArmyGdQuiz";
+
+
 
 
 function App() {
@@ -41,6 +45,11 @@ function App() {
         {/* Quiz Section */}
         <Route path="/quiz/civilservice/upsc-quiz" element={<UpscQuiz />} />
         <Route path="/uppsc-quiz" element={<UpscQuiz />} /> 
+
+        {/* SSC Quiz */}
+        <Route path="/quiz/ssc/ArmyGdQuiz" element={<ArmyGdQuiz />} />
+        <Route path="/ArmyGdQuiz" element={<ArmyGdQuiz />} />
+      
       
       </Routes>
 
